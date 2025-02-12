@@ -1,7 +1,7 @@
 import { solveNQueens } from './n_reine';
 
 describe('Tests de base', () => {
-    test('dummy test', () => {
+    test('dummy test ', () => {
         expect(true).toBe(true);
     });
 });
