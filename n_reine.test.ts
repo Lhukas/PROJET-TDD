@@ -37,6 +37,22 @@ describe('Cas simples', () => {
         expect(result).toEqual([]);
     });
 
+    test('pour n = 4, doit retourner exactement 2 solutions', () => {
+        const solutions = solveNQueens(4);
+        expect(solutions.length).toBe(2);
+    });
+
+    test('chaque solution doit être une grille 4x4 avec une reine par ligne', () => {
+        const solutions = solveNQueens(4);
+        solutions.forEach(solution => {
+            expect(solution.length).toBe(4);
+            solution.forEach(row => {
+                expect(row.length).toBe(4);
+                expect((row.split('').filter(c => c === '#')).length).toBe(1);
+            });
+        });
+    });
+
 
 });
 
