@@ -26,6 +26,18 @@ describe('Cas simples', () => {
         const result = solveNQueens(1);
         expect(result).toEqual([["#"]]);
     });
+
+    test('pour n = 2, doit retourner []', () => {
+        const result = solveNQueens(2);
+        expect(result).toEqual([]);
+    });
+
+    test('pour n = 3, doit retourner []', () => {
+        const result = solveNQueens(3);
+        expect(result).toEqual([]);
+    });
+
+
 });
 
 
