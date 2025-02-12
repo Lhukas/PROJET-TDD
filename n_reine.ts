@@ -3,5 +3,9 @@ export function solveNQueens(n: number): string[][] {
         throw new Error("Entrée non valide : n doit être un entier positif.");
     }
 
+    if (n === 1) {
+        return [["#"]];
+    }
+
     return [];
 }

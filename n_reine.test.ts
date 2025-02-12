@@ -1,5 +1,11 @@
 import { solveNQueens } from './n_reine';
 
+describe('Tests de base', () => {
+    test('dummy test', () => {
+        expect(true).toBe(true);
+    });
+});
+
 describe('Validation des entrées', () => {
     test('doit lancer une erreur pour une chaîne de caractères', () => {
         expect(() => solveNQueens("4" as any)).toThrow("Entrée non valide : n doit être un entier positif.");
@@ -15,12 +21,15 @@ describe('Validation des entrées', () => {
     });
 });
 
-
-describe('Tests de base', () => {
-    test('dummy test', () => {
-        expect(true).toBe(true);
+describe('Cas simples', () => {
+    test('pour n = 1, doit retourner [["#"]]', () => {
+        const result = solveNQueens(1);
+        expect(result).toEqual([["#"]]);
     });
 });
+
+
+
 
 
 //npm test
