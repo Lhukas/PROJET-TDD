@@ -1,4 +1,4 @@
-export function solveNQueens(n: number): string[][] {
+export function Partie1(n: number): string[][] {
     if (typeof n !== 'number' || !Number.isInteger(n) || n <= 0) {
         throw new Error("Entrée non valide : n doit être un entier positif.");
     }
@@ -37,4 +37,10 @@ export function solveNQueens(n: number): string[][] {
 
     backtrack(0);
     return solutions;
+}
+
+
+export function Partie2(): string[][] {
+
+    return [];
 }
